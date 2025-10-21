@@ -1,13 +1,17 @@
 package com.pluralsight;
 
 public class hotel {
-    public static void main(String[] args) {
+    private String name;
+    private int numberOfSuites;
+    private int numberOfRooms;
+    private int bookedSuites;
+    private int bookedBasicRooms;
 
-        Reservation reservation1 = new Reservation("King", 1, false);
-        System.out.println(reservation1.getReservationTotal());
-
-
-        Reservation reservation2 = new Reservation("King", 1, true);
-        System.out.println(reservation2.getReservationTotal());
+    public hotel(String name, int numberOfSuites, int numberOfRooms, int bookedSuites, int bookedBasicRooms) {
+        this.name = name;
+        this.numberOfSuites = numberOfSuites;
+        this.numberOfRooms = numberOfRooms;
+        this.bookedSuites = bookedSuites;
+        this.bookedBasicRooms = bookedBasicRooms;
     }
 }
