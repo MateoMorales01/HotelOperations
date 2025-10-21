@@ -5,7 +5,11 @@ public class Reservation {
     private String roomType;
     private int numberOfNights;
     private boolean isWeekend;
-        // Getters and Setters
+
+    public Reservation(String king, int i, boolean b) {
+    }
+
+    // Getters and Setters
     public String getRoomType() {
         return roomType;
     }

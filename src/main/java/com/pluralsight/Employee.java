@@ -6,7 +6,7 @@ public class Employee {
     private String department;
     private double payRate;
     private double hoursWorked;
-    private static final int regularHoursLimit = 40;
+    private static final int REGULAR_HOURS_LIMIT = 40;
 
     public Employee(int employeeId, String name, String department, double payRate, double hoursWorked) {
         this.employeeId = employeeId;
@@ -37,10 +37,10 @@ public class Employee {
     }
 
     public double getRegularHours() {
-        return Math.min(hoursWorked, regularHoursLimit);
+        return Math.min(hoursWorked, REGULAR_HOURS_LIMIT);
     }
     public double getOvertimeHours() {
-        return Math.max(0, hoursWorked - regularHoursLimit);
+        return Math.max(0, hoursWorked - REGULAR_HOURS_LIMIT);
     }
     public double getTotalPay() {
         double regularPay = getRegularHours() * payRate;

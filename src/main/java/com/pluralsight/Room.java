@@ -26,6 +26,25 @@ public class Room {
     }
 
     public boolean isAvailable() {
-        return isAvailable;
+        return !isDirty && !isOccupied;
+    }
+
+    //DO
+    public void checkIn() {
+        if (isAvailable) {
+            throw new IllegalStateException("Room is not available.");
+        }
+        isOccupied = true;
+        isDirty = true;
+    }
+    public void checkOut() {
+        if (isAvailable()) {
+            throw new IllegalStateException("Room is available.");
+        }
+        isOccupied = false;
+        cleanRoom();
+    }
+    public void cleanRoom() {
+        isDirty = false;
     }
 }

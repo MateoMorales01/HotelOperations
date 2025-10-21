@@ -2,6 +2,12 @@ package com.pluralsight;
 
 public class hotel {
     public static void main(String[] args) {
-        System.out.println("Ready");
+
+        Reservation reservation1 = new Reservation("King", 1, false);
+        System.out.println(reservation1.getReservationTotal());
+
+
+        Reservation reservation2 = new Reservation("King", 1, true);
+        System.out.println(reservation2.getReservationTotal());
     }
 }
